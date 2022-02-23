@@ -46,14 +46,10 @@ paragraph.innerHTML =
   Count the number of words in the paragraph tag and display the count afer the heading.
   You can assume that all words are separated by one singular whitespace.
 */
-// function wordCount(elements) {
-//   var count = 0;
-//   for (var i = 0; i < elements.length; i++) {
-//     count += elements[i].textContent.split(/\s/).length;
-//   }
-//   return count;
-// }
-// var wordsInParagraphs = wordCount(document.getElementsByTagName("p"));
+const wordCount = paragraph.innerText.split(' ').length;
+const wordCountElem = document.createElement('div');
+wordCountElem.innerText = `${wordCount} words`;
+document.body.insertBefore(wordCountElem, paragraph);
 
 /*
   Exercise 05
